@@ -15,7 +15,7 @@ This data science project series walks through step by step process of how to bu
 1. Create EC2 instance using amazon console, also in security group add a rule to allow HTTP incoming traffic
 2. Now connect to your instance using a command like this,
 ```
-ssh -i "C:\Users\Viral\.ssh\Banglore.pem" ubuntu@ec2-3-133-88-210.us-east-2.compute.amazonaws.com
+ssh -i "C:\Users\ramna\.ssh\Banglore.pem" ubuntu@http://18.133.161.80
 ```
 3. nginx setup
    1. Install nginx on EC2 instance using these commands,
@@ -35,14 +35,14 @@ ssh -i "C:\Users\Viral\.ssh\Banglore.pem" ubuntu@ec2-3-133-88-210.us-east-2.comp
    ```
    4. Now when you load cloud url in browser you will see a message saying "welcome to nginx" This means your nginx is setup and running.
 4. Now you need to copy all your code to EC2 instance. You can do this either using git or copy files using winscp. We will use winscp. You can download winscp from here: https://winscp.net/eng/download.php
-5. Once you connect to EC2 instance from winscp (instruction in a youtube video), you can now copy all code files into /home/ubuntu/ folder. The full path of your root folder is now: **/home/ubuntu/BangloreHomePrices**
+5. Once you connect to EC2 instance from winscp (instruction in a youtube video), you can now copy all code files into /home/ubuntu/ folder. The full path of your root folder is now: **/home/ubuntu/HomePricePrediction**
 6.  After copying code on EC2 server now we can point nginx to load our property website by default. For below steps,
     1. Create this file /etc/nginx/sites-available/bhp.conf. The file content looks like this,
     ```
     server {
 	    listen 80;
             server_name bhp;
-            root /home/ubuntu/BangloreHomePrices/client;
+            root /home/ubuntu/HomePricePrediction/client;
             index app.html;
             location /api/ {
                  rewrite ^/api(.*) $1 break;
