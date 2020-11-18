@@ -65,8 +65,8 @@ ssh -i "C:\Users\ramna\.ssh\Banglore.pem" ubuntu@http://18.133.161.80
 7. Now install python packages and start flask server
 ```
 sudo apt-get install python3-pip
-sudo pip3 install -r /home/ubuntu/BangloreHomePrices/server/requirements.txt
-python3 /home/ubuntu/BangloreHomePrices/client/server.py
+sudo pip3 install -r /home/ubuntu/HomePricePrediction/server/requirements.txt
+python3 /home/ubuntu/HomePricePrediction/client/server.py
 ```
 Running last command above will prompt that server is running on port 5000.
 8. Now just load your cloud url in browser (for me it was http://18.133.161.80) and this will be fully functional website running in production cloud environment
