@@ -7,9 +7,9 @@ library(coda)
 library(kableExtra)
 
 # Iport data
-X<-read.csv("F:/FreWork/yogesh/X.csv",header=FALSE)
-Y<-read.csv("F:/FreWork/yogesh/Y.csv",header=FALSE)
-T<-read.csv("F:/FreWork/yogesh/Time.csv",header=FALSE)
+X<-read.csv("D:/statistics/X.csv",header=FALSE)
+Y<-read.csv("D:/statistics/Y.csv",header=FALSE)
+T<-read.csv("D:/statistics/Time.csv",header=FALSE)
 eeg_data<-bind_cols(T,Y,X)
 names(eeg_data)<-c("t","y","x1","x2","x3","x4")
 eeg_data %>% head (n=10) %>%
